@@ -29,9 +29,9 @@
         //拿到查询字段，商品的id后进行http请求
         var id = this.id;
         var _this = this;
-        this.$http.get('http://localhost:1111/static/listDetail.json')
+        this.$http.get('../static/listDetail.json')
           .then(response => {
-              // console.log(response.data);
+               console.log(response.data);
           });
         this.loading = false;
       }
