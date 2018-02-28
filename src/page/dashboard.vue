@@ -99,7 +99,7 @@ import router from '../router/index'
         })
       },
       loadJson:function(){
-       return this.$http.get('http://localhost:1111/static/data.json',{})
+       return this.$http.get('../static/data.json',{})
           .then(res=>{
             // console.log(res.data);
             this.realTableData = res.data;
@@ -107,7 +107,7 @@ import router from '../router/index'
       },
       cartView:function(){
          var _this=this;
-         this.$http.get("http://localhost:1111/static/details.json",{}).then(function (res) {
+         this.$http.get("../static/details.json",{}).then(function (res) {
       
           _this.productList=res.data;//body是vue封装的一层
           var date = new Date();
